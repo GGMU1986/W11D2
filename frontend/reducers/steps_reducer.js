@@ -19,7 +19,6 @@ export const stepsReducer = (state = initialState, action) => {
     Object.freeze(state);
     const nextState = Object.assign({}, state);
     switch (action.type) {
-
         case RECEIVE_STEPS:
             action.steps.forEach(step => {
                 nextState[step.id] = step;
@@ -27,11 +26,11 @@ export const stepsReducer = (state = initialState, action) => {
             return nextState;
 
         case RECEIVE_STEP:
-            nextState[step.id] = step;
+            nextState[action.step.id] = action.step;
             return nextState;
             
         case REMOVE_STEP:
-            delete nextState[step.id];
+            delete nextState[action.step.id];
             return nextState;
         default:
             return state;
