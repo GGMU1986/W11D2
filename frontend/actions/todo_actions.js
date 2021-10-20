@@ -17,4 +17,4 @@ const removeTodo = todo => ({
     todo
 })
 
-export { RECEIVE_TODOS, RECEIVE_TODO, REMOVE_TODO, receiveTodo };
+export { RECEIVE_TODOS, RECEIVE_TODO, REMOVE_TODO, receiveTodo, removeTodo };
