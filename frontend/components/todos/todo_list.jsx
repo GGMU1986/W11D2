@@ -1,12 +1,12 @@
 import React from 'react';
 import { allTodos } from '../../reducers/selectors';
+import TodoListItem from './todo_list_item';
 
 const TodoList = (props) => {
+    const todos = props.todos
     return (
         <div>
-            <ul>
-                {props.todos.map(todo => <li key={todo.id}>{todo.title}</li>)}
-            </ul>
+            <TodoListItem todos={todos}/>
         </div>
     )
         
