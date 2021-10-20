@@ -1,12 +1,9 @@
 import React from "react";
 
-const TodoListItem = (props) => {
-    
+const TodoListItem = ({todo}) => {
     return (
-        <ul>
-            {props.todos.map(todo => <li key={todo.id}>{todo.title}</li>)}
-        </ul>
-    )
-}
+        <li key={todo.id}>{todo.title}</li>
+    );
+};
 
 export default TodoListItem;
